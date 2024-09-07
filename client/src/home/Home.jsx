@@ -1,6 +1,12 @@
+// client/src/home/Home.jsx
 import React from "react";
 import { Box, Typography, useMediaQuery, useTheme, Grid, Divider } from '@mui/material';
+
 import heroSectionImage from '../images/hero.jpeg';
+import SportShoesImage from '../images/sport-shoes.jpg';
+import SneakersImage from '../images/sneakers.jpg';
+import BootsImage from '../images/boots.jpg';
+import HighHeelsImage from '../images/high-heels.jpg';
 
 const Home = () => {
   const theme = useTheme();
@@ -170,34 +176,112 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
+
+      {/* What We Offer Section */}
+      <Box
+        sx={{
+          padding: isSmallScreen ? '20px' : '40px',
+          backgroundColor: '#f5f5f5',
+          textAlign: 'center',
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontSize: isSmallScreen ? '28px' : '37px', 
+            fontWeight: 700,
+            lineHeight: '37px',
+            color: '#2d2d2d',
+            margin: isSmallScreen ? '0px 20px 30px' : '0px 66px 60px',
+            textAlign: 'center',
+          }}
+        >
+          What We Offer
+        </Typography>
+
+        {/* Divider Line */}
+        <Divider
+          sx={{
+            width: isSmallScreen ? '60%' : '200px',
+            margin: '10px auto 40px',
+            borderBottomWidth: '2px',
+            backgroundColor: '#b0b0b0',
+          }}
+        />
+
+        {/* Grid for the types of shoes */}
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={3}>
+            <Box sx={styles.offerBox}>
+              <img src={SneakersImage} alt="Sneakers" style={styles.offerImage} />
+              <Typography sx={styles.offerText}>
+                Sneakers
+              </Typography>
+            </Box>
+          </Grid>
+          
+          <Grid item xs={12} md={3}>
+            <Box sx={styles.offerBox}>
+              <img src={SportShoesImage} alt="Sport Shoes" style={styles.offerImage} />
+              <Typography sx={styles.offerText}>
+                Sport Shoes
+              </Typography>
+            </Box>
+          </Grid>
+          
+          <Grid item xs={12} md={3}>
+            <Box sx={styles.offerBox}>
+              <img src={HighHeelsImage} alt="High Heels" style={styles.offerImage} />
+              <Typography sx={styles.offerText}>
+                High Heels
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <Box sx={styles.offerBox}>
+              <img src={BootsImage} alt="Boots" style={styles.offerImage} />
+              <Typography sx={styles.offerText}>
+                Boots
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </Box>
   );
 };
 
-// Styles for the offer boxes
 const styles = {
   offerBox: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     padding: '20px',
     borderRadius: '8px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center', // Center the text and titles
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+    ':hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+    },
   },
   offerTitle: {
-    fontSize: '1.5rem',
-    fontWeight: 600,
+    fontWeight: 'bold',
     marginBottom: '10px',
-    color: '#333',
   },
   offerDescription: {
-    fontSize: '1rem',
-    color: '#555',
-    textAlign: 'center', // Center the description text
+    color: '#333333',
   },
+  offerImage: {
+    width: '100%', // Adjust width as needed
+    height: '200px', // Fixed height to ensure consistency
+    objectFit: 'cover', // Ensure images cover the area without distortion
+    borderRadius: '8px',
+    marginBottom: '10px',
+  },
+  offerText: {
+    fontWeight: 'bold',
+    marginBottom: '10px',
+  }
 };
 
 export default Home;
