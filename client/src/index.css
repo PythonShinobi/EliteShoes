@@ -1,0 +1,8 @@
+body {
+  background-color: #f0f4f8 !important; /* Light grey-blue */
+  color: #333 !important; /* Dark grey for text */
+  font-family: 'Roboto', sans-serif !important; /* Clean and modern font */
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.6 !important;
+}
