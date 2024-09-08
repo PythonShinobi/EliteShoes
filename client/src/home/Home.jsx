@@ -248,6 +248,52 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
+      
+      {/* Where We Are Located Section */}
+      <Box
+        sx={{
+          backgroundColor: '#f0f0f0',
+          padding: isSmallScreen ? '20px' : '40px',
+          textAlign: 'center',
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontSize: isSmallScreen ? '28px' : '37px', 
+            fontWeight: 700,
+            lineHeight: '1.4',
+            color: '#2d2d2d',
+            marginBottom: '20px',
+          }}
+        >
+          Where We Are Located
+        </Typography>
+
+        <Divider
+          sx={{
+            width: isSmallScreen ? '60%' : '200px',
+            margin: '10px auto 40px',
+            borderBottomWidth: '2px',
+            backgroundColor: '#b0b0b0',
+          }}
+        />
+
+        <Typography
+          sx={{
+            fontSize: isSmallScreen ? '18px' : '24px', 
+            fontWeight: 400,
+            lineHeight: '1.5',
+            color: '#4d4d4d',
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: isSmallScreen ? '0 20px' : '0 40px',
+          }}
+        >
+          We are located at City Plaza, Nairobi, Kenya. 
+          You can visit us to check out our latest collection in-store and enjoy exclusive discounts.
+        </Typography>
+      </Box>
     </Box>
   );
 };
