@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from "./home/Home"
 import Navbar from './navbar/Navbar';
+import Footer from './footer/Footer';
 
 // Memoized components
 const MemoizedComponents = {
@@ -19,6 +20,7 @@ const App = () => {
             <Route path='/' element={<MemoizedComponents.Home />} />            
           </Routes>          
         </div>
+        <Footer />
     </BrowserRouter>
   );
 };
