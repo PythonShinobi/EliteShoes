@@ -1,3 +1,4 @@
+// client/src/footer/Footer.jsx
 import React from 'react';
 import { Box, Typography, Link, IconButton } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
