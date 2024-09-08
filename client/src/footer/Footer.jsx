@@ -15,8 +15,7 @@ const Footer = () => {
         position: 'relative',
         bottom: 0,
         width: '100%',
-        boxShadow: '0 -2px 4px rgba(0, 0, 0, 0.2)', // Slightly more pronounced shadow
-        borderTop: '2px solid #34495e', // Gray-blue for the top border
+        boxShadow: '0 -2px 4px rgba(0, 0, 0, 0.2)', // Slightly more pronounced shadow        
       }}
     >
       <Box sx={{ mb: 2 }}>
