@@ -1,5 +1,5 @@
 // client/src/home/Home.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, useMediaQuery, useTheme, Grid, Divider } from '@mui/material';
 
 import heroSectionImage from '../images/hero.jpeg';
@@ -12,6 +12,11 @@ const Home = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  useEffect(() => {
+    // Scroll to top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box>
