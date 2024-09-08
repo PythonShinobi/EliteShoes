@@ -21,9 +21,9 @@ const Navbar = () => {
       <AppBar 
         position="fixed" 
         sx={{ 
-          backgroundColor: 'transparent', // Fully transparent navbar
-          boxShadow: 'none',
-          borderBottom: '2px solid rgba(255, 255, 255, 0.3)', // A subtle horizontal line
+          backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
+          backdropFilter: 'blur(10px)', // Blur effect
+          boxShadow: 'none',          
         }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           {/* Logo */}
